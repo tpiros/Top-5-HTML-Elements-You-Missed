@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-top: 10px;
+      }
+      input:invalid + span::after {
+        position: absolute;
+        content: '👎🏼';
+        padding-left: 5px;
+        color: #8b0000;
+      }
+
+      input:valid + span::after {
+        position: absolute;
+        content: '👍🏼';
+        padding-left: 5px;
+        color: #009000;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="number_demo">Choose a number:</label>
+        <!-- <input type="number" id="number_demo" name="number_demo" /> -->
+        <input type="number" id="input_sample" name="sample" pattern="\d*" />
+      </div>
+      <div>
+        <label for="phone_demo"
+          >Enter a valid Singapore mobile number (8xxx-xxxx or
+          9xxx-xxxx):</label
+        >
+        <input
+          type="tel"
+          id="phone_demo"
+          name="phone_demo"
+          required
+          pattern="[89]\d{3}-\d{4}"
+        />
+        <span></span>
+      </div>
+      <div>
+        <label for="email_demo">Enter your email address:</label>
+        <input type="email" id="email_demo" name="email_demo" />
+      </div>
+      <div>
+        <label for="datetime_demo">Pick your session time:</label>
+        <input type="datetime-local" id="datetime_demo" name="datetime_demo" />
+      </div>
+      <div>
+        <label for="url_demo">Enter a URL:</label>
+        <input type="url" id="url_demo" name="url_demo" />
+      </div>
+      <div>
+        <label for="colour_demo">Pick a colour:</label>
+        <input type="color" id="colour_demo" name="colour_demo" />
+      </div>
+    </form>
+  </body>
+</html>

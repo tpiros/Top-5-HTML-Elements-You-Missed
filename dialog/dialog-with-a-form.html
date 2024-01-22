@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      dialog {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      }
+      dialog::backdrop {
+        background-color: hsla(0, 100%, 50%, 0.5);
+      }
+    </style>
+    <script defer src="dialog-with-a-form.js"></script>
+  </head>
+  <body>
+    <button id="open">Open Dialog</button>
+    <output></output>
+
+    <dialog>
+      <h1>Hello there</h1>
+      <img src="hello-there.gif" alt="Obi-Wan Kenobi" />
+      <form>
+        <label
+          >Who is your favourite Star Wars Character?
+          <select>
+            <option>Pick one</option>
+            <option>Luke Skywalker</option>
+            <option>Darth Vader</option>
+            <option>Yoda</option>
+          </select>
+        </label>
+        <div>
+          <button formmethod="dialog">Cancel</button>
+          <button id="confirmButton" value="default">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

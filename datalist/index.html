@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="datalist.js"></script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="sw_character_pick">Choose a Star Wars character:</label>
+        <input
+          list="sw_characters"
+          id="sw_character_pick"
+          name="sw_character_pick"
+        />
+
+        <datalist id="sw_characters">
+          <option value="Luke Skywalker"></option>
+          <option value="Darth Vader"></option>
+          <option value="Han Solo"></option>
+          <option value="Leia Organa"></option>
+        </datalist>
+        <button>Pick</button>
+      </div>
+      <div>
+        <label for="colour_demo">Pick a colour:</label>
+        <input type="color" list="pastel" id="colour_demo" name="colour_demo" />
+        <datalist id="pastel">
+          <option value="#CCF1FF"></option>
+          <option value="#E0D7FF"></option>
+          <option value="#FFCCE1"></option>
+          <option value="#D7EEFF"></option>
+          <option value="#FAFFC7"></option>
+        </datalist>
+      </div>
+    </form>
+    <output></output>
+  </body>
+</html>
